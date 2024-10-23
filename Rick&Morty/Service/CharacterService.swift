@@ -7,9 +7,11 @@
 
 import Foundation
 
-//TODO: do a protocol
+protocol CharacterService {
+    func fetchCharactersNextPage(page: Int) async throws -> [Character]
+}
 
-final class CharacterService {
+final class CharacterServiceImpl: CharacterService {
 
     func fetchCharactersNextPage(page: Int) async throws -> [Character] {
         let serviceResponse = try await Network.shared.fetch(page: page) ?? CharacterResponse(results: [])
