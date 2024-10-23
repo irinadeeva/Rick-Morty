@@ -53,7 +53,8 @@ struct CharactersListView: View {
 
     var body: some View {
         content
-            .navigationTitle("Rick and Morty Characters")
+            .navigationTitle("Characters")
+            .background(Color(.systemBackground))
 
     }
 }
