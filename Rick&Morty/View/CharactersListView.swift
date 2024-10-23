@@ -49,6 +49,7 @@ struct CharactersListView: View {
                     coordinator.push(.characterDetail)
                 }
         }
+        .listStyle(.inset)
     }
 
     var body: some View {

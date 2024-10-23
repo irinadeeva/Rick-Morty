@@ -39,5 +39,6 @@ struct CharacterRowView: View {
 }
 
 #Preview {
-    CharacterRowView(character: rick)
+    CharacterRowView(character: Character(id: 1, name: "Rick Sanchez", status: "", species: "", type: "", gender: "Male", origin: Origin(name: "", url: ""), location: Location(name: "", url: ""), image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", episode: [])
+    )
 }
