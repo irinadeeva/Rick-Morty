@@ -13,8 +13,6 @@ struct CharactersListView: View {
 
     @StateObject private var characterVM: CharactersViewModel
 
-//    @State private var showAlert = false
-
     init(viewModel: CharactersViewModel) {
         _characterVM = StateObject(wrappedValue: viewModel)
     }
