@@ -9,14 +9,37 @@ import SwiftUI
 
 struct CharacterDetailView: View {
 
+    let character: Character
+
     var body: some View {
-        List {
-            Text("1")
+        ScrollView {
+            Image(systemName: "person.circle")
+                .offset(y: -130)
+                .padding(.bottom, -130)
+
+            VStack(alignment: .leading) {
+                Text(character.name)
+                    .font(.title)
+
+                HStack {
+                    Text(character.species)
+                    Spacer()
+                    Text(character.gender)
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
+                Divider()
+
+                Text("About \(character.name)")
+                    .font(.title2)
+                Text(character.status)
+            }
+            .padding()
         }
-        .navigationTitle("")
     }
 }
 
 #Preview {
-    CharacterDetailView()
+    CharacterDetailView(character: rick)
 }
