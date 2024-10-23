@@ -32,5 +32,5 @@ To run the project locally, follow these steps:
    git clone <repository_url>
 2. Open the project in Xcode:
    ```bash
-  open RickAndMortyApp.xcodeproj
+   open RickAndMortyApp.xcodeproj
 
