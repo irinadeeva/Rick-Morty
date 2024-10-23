@@ -1,5 +1,6 @@
 # Rick and Morty Characters App
 
+![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUwgCwFQVnG_oINHO_PdwOYyr2WCgiy1B8KA&s)
 ## Overview
 This is a simple iOS application developed as a test task. The application uses the **Rick and Morty API** to display a list of characters from the *Rick and Morty* series and provides detailed information about each character when selected.
 
