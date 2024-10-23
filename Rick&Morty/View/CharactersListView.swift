@@ -12,8 +12,8 @@ struct CharactersListView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
 
     @StateObject private var characterVM: CharactersViewModel
-    
-    @State private var showAlert = false
+
+//    @State private var showAlert = false
 
     init(viewModel: CharactersViewModel) {
         _characterVM = StateObject(wrappedValue: viewModel)
@@ -23,16 +23,6 @@ struct CharactersListView: View {
     var content: some View {
         if characterVM.characters.isEmpty {
             LoadingView()
-        } else if let errorMessage = characterVM.errorMessage {
-            VStack {
-                Text(errorMessage)
-                    .foregroundColor(.red)
-                    .padding()
-                Button("Try again") {
-                    characterVM.retry()
-                }
-            }
-            .padding()
         } else {
             list
         }
@@ -55,11 +45,21 @@ struct CharactersListView: View {
     var body: some View {
         content
             .navigationTitle("Characters")
-            .background(Color(.systemBackground))
-
+            .alert(isPresented: $characterVM.showAlert) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(characterVM.errorMessage ?? "Unknown error"),
+                    primaryButton: .default(Text("Try again")) {
+                        characterVM.showAlert = false
+                        characterVM.retry()
+                    },
+                    secondaryButton: .cancel() {
+                    characterVM.showAlert = false
+                })
+            }
     }
 }
 
 #Preview {
-    CharactersListView(viewModel: CharactersViewModel(characterService: CharacterService()))
+    CharactersListView(viewModel: CharactersViewModel(characterService: CharacterServiceImpl()))
 }

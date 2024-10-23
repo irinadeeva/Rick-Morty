@@ -13,10 +13,6 @@ struct CharacterRowView: View {
 
     var body: some View {
         HStack {
-//            Image(systemName: "person.circle")
-//                .resizable()
-//                .frame(width: 50, height: 50)
-
             AsyncImage(url: URL(string: character.image)) { image in
                 image.resizable()
             } placeholder: {

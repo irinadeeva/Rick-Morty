@@ -9,10 +9,12 @@ import Foundation
 
 @MainActor
 final class CharactersViewModel: ObservableObject {
-    
+
     @Published var characters = [Character]()
 
     @Published var errorMessage: String? = nil
+
+    @Published var showAlert = false
 
     private let characterService: CharacterService
     
@@ -25,7 +27,7 @@ final class CharactersViewModel: ObservableObject {
         }
     }
 
-    func loadMoreCharactersIfNeeded(currentCharacter: Character)  {
+    func loadMoreCharactersIfNeeded(currentCharacter: Character) {
         if characters.last == currentCharacter {
             Task {
                 await fetchCharacters()
@@ -47,6 +49,7 @@ final class CharactersViewModel: ObservableObject {
             characters.append(contentsOf: newCharacters)
             currentPage += 1
         } catch {
+            showAlert = true
             errorMessage = "Character loading error: \(error.localizedDescription)"
         }
     }

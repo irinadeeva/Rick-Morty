@@ -12,12 +12,6 @@ enum Page {
     case characterDetail
 }
 
-// TODO: implement, why some view doesn't work, it is ok if i use any here and implement
-protocol Coordinator {
-    func push()
-    func build(page: Page) -> any View
-}
-
 @MainActor
 final class AppCoordinator: ObservableObject {
 
@@ -42,7 +36,8 @@ final class AppCoordinator: ObservableObject {
     }
 
     private func charactersView() -> some View {
-        let viewModal = CharactersViewModel(characterService: CharacterService())
+        let service = CharacterServiceImpl()
+        let viewModal = CharactersViewModel(characterService: service)
         let view = CharactersListView(viewModel: viewModal)
         return view
     }
