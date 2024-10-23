@@ -7,53 +7,48 @@
 
 import SwiftUI
 
-// TODO: why String, Identifiable , not Hashable?
-enum Page: String, Identifiable {
-    case characters, characterDetail
-
-    var id: String {
-        self.rawValue
-    }
+enum Page {
+    case characters
+    case characterDetail
 }
 
-// TODO: implement, why some view dosnt work, it is ok if i use any here and implement
+// TODO: implement, why some view doesn't work, it is ok if i use any here and implement
 protocol Coordinator {
     func push()
     func build(page: Page) -> any View
 }
 
-class AppCoordinator: ObservableObject {
+@MainActor
+final class AppCoordinator: ObservableObject {
+
     @Published var path = NavigationPath()
 
-    func push(_ page: Page) {
-        path.append (page)
-    }
+    @Published var selectedCharacter: Character?
 
-    // TODO: delete?
-    //    func pop() {
-    //        path.removeLast()
-    //    }
+    func push(_ page: Page) {
+        path.append(page)
+    }
 
     @ViewBuilder
     func build(page: Page) -> some View {
         switch page {
-            case .characters:
-                charactersView()
-            case .characterDetail:
-                characterDetailView()
+        case .characters:
+            charactersView()
+        case .characterDetail:
+            if let selectedCharacter {
+                characterDetailView(selectedCharacter)
+            }
         }
     }
 
     private func charactersView() -> some View {
-        //  TODO: Использовать Dependency Injection (VM)
-
-        return CharactersView()
+        let viewModal = CharactersViewModel(characterService: CharacterService())
+        let view = CharactersListView(viewModel: viewModal)
+        return view
     }
 
-    private func characterDetailView() -> some View {
-        //  TODO: Использовать Dependency Injection (VM)
-
-        return CharacterDetailView()
+    private func characterDetailView(_ character: Character) -> some View {
+        let view = CharacterDetailView(character: character)
+        return view
     }
-
 }

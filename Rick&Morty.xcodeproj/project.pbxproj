@@ -16,9 +16,18 @@
 		BE22F8E72CC7CF2E0074D967 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8E62CC7CF2E0074D967 /* Character.swift */; };
 		BE22F8E92CC7CF7B0074D967 /* CharactersViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8E82CC7CF7B0074D967 /* CharactersViewModal.swift */; };
 		BE22F8EB2CC7CFB90074D967 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8EA2CC7CFB90074D967 /* AppCoordinator.swift */; };
-		BE22F8ED2CC7D6710074D967 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8EC2CC7D6710074D967 /* CharactersView.swift */; };
+		BE22F8ED2CC7D6710074D967 /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8EC2CC7D6710074D967 /* CharactersListView.swift */; };
 		BE22F8EF2CC7D6910074D967 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8EE2CC7D6910074D967 /* CharacterDetailView.swift */; };
 		BE22F8F12CC7D7300074D967 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8F02CC7D7300074D967 /* CoordinatorView.swift */; };
+		BE22F8F52CC819370074D967 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8F22CC819370074D967 /* Network.swift */; };
+		BE22F8F62CC819370074D967 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8F32CC819370074D967 /* NetworkError.swift */; };
+		BE22F8FB2CC819410074D967 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8F82CC819410074D967 /* ResponseHandler.swift */; };
+		BE22F8FD2CC82BB30074D967 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F8FC2CC82BB30074D967 /* CharacterService.swift */; };
+		BE22F9012CC834C20074D967 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F9002CC834C20074D967 /* ServiceResponse.swift */; };
+		BE22F9032CC8EA4A0074D967 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F9022CC8EA4A0074D967 /* CharacterRowView.swift */; };
+		BE22F9062CC9146E0074D967 /* RequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F9052CC9146E0074D967 /* RequestConstants.swift */; };
+		BE22F9082CC91CC60074D967 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F9072CC91CC60074D967 /* LoadingView.swift */; };
+		BE22F90B2CC91D010074D967 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE22F90A2CC91D010074D967 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +60,18 @@
 		BE22F8E62CC7CF2E0074D967 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		BE22F8E82CC7CF7B0074D967 /* CharactersViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModal.swift; sourceTree = "<group>"; };
 		BE22F8EA2CC7CFB90074D967 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		BE22F8EC2CC7D6710074D967 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		BE22F8EC2CC7D6710074D967 /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		BE22F8EE2CC7D6910074D967 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		BE22F8F02CC7D7300074D967 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		BE22F8F22CC819370074D967 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BE22F8F32CC819370074D967 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BE22F8F82CC819410074D967 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		BE22F8FC2CC82BB30074D967 /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
+		BE22F9002CC834C20074D967 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		BE22F9022CC8EA4A0074D967 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
+		BE22F9052CC9146E0074D967 /* RequestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConstants.swift; sourceTree = "<group>"; };
+		BE22F9072CC91CC60074D967 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BE22F90A2CC91D010074D967 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +122,7 @@
 		BE22F8B62CC7B8B80074D967 /* Rick&Morty */ = {
 			isa = PBXGroup;
 			children = (
+				BE22F8F42CC819370074D967 /* Network */,
 				BE22F8E42CC7CC2D0074D967 /* Service */,
 				BE22F8E12CC7CBFF0074D967 /* Model */,
 				BE22F8E32CC7CC0E0074D967 /* ViewModal */,
@@ -145,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				BE22F8E62CC7CF2E0074D967 /* Character.swift */,
+				BE22F9002CC834C20074D967 /* ServiceResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,8 +172,10 @@
 		BE22F8E22CC7CC060074D967 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE22F9092CC91CD70074D967 /* Common */,
 				BE22F8F02CC7D7300074D967 /* CoordinatorView.swift */,
-				BE22F8EC2CC7D6710074D967 /* CharactersView.swift */,
+				BE22F9022CC8EA4A0074D967 /* CharacterRowView.swift */,
+				BE22F8EC2CC7D6710074D967 /* CharactersListView.swift */,
 				BE22F8EE2CC7D6910074D967 /* CharacterDetailView.swift */,
 			);
 			path = View;
@@ -170,6 +192,7 @@
 		BE22F8E42CC7CC2D0074D967 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BE22F8FC2CC82BB30074D967 /* CharacterService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -180,6 +203,34 @@
 				BE22F8EA2CC7CFB90074D967 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BE22F8F42CC819370074D967 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BE22F8F82CC819410074D967 /* ResponseHandler.swift */,
+				BE22F8F22CC819370074D967 /* Network.swift */,
+				BE22F8F32CC819370074D967 /* NetworkError.swift */,
+				BE22F9042CC914580074D967 /* Request */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BE22F9042CC914580074D967 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				BE22F9052CC9146E0074D967 /* RequestConstants.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		BE22F9092CC91CD70074D967 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE22F9072CC91CC60074D967 /* LoadingView.swift */,
+				BE22F90A2CC91D010074D967 /* ErrorView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +365,20 @@
 			files = (
 				BE22F8E92CC7CF7B0074D967 /* CharactersViewModal.swift in Sources */,
 				BE22F8E72CC7CF2E0074D967 /* Character.swift in Sources */,
-				BE22F8ED2CC7D6710074D967 /* CharactersView.swift in Sources */,
+				BE22F8F52CC819370074D967 /* Network.swift in Sources */,
+				BE22F8FB2CC819410074D967 /* ResponseHandler.swift in Sources */,
+				BE22F8ED2CC7D6710074D967 /* CharactersListView.swift in Sources */,
 				BE22F8EF2CC7D6910074D967 /* CharacterDetailView.swift in Sources */,
+				BE22F8FD2CC82BB30074D967 /* CharacterService.swift in Sources */,
 				BE22F8EB2CC7CFB90074D967 /* AppCoordinator.swift in Sources */,
+				BE22F9082CC91CC60074D967 /* LoadingView.swift in Sources */,
+				BE22F8F62CC819370074D967 /* NetworkError.swift in Sources */,
+				BE22F9012CC834C20074D967 /* ServiceResponse.swift in Sources */,
 				BE22F8B82CC7B8B80074D967 /* Rick_MortyApp.swift in Sources */,
+				BE22F9032CC8EA4A0074D967 /* CharacterRowView.swift in Sources */,
 				BE22F8F12CC7D7300074D967 /* CoordinatorView.swift in Sources */,
+				BE22F9062CC9146E0074D967 /* RequestConstants.swift in Sources */,
+				BE22F90B2CC91D010074D967 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
