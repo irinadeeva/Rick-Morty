@@ -29,7 +29,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository from GitHub:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/irinadeeva/Rick-Morty.git
 2. Open the project in Xcode:
    ```bash
    open RickAndMortyApp.xcodeproj
