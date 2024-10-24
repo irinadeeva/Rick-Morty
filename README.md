@@ -2,7 +2,7 @@
 
 ![Alt text](https://uploads.dailydot.com/667/d8/a81ca366f1717035.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop)
 ## Overview
-This is a simple iOS application developed as a test task. The application uses the **Rick and Morty API** to display a list of characters from the *Rick and Morty* series and provides detailed information about each character when selected.
+This is a simple iOS application developed. The application uses the **Rick and Morty API** to display a list of characters from the *Rick and Morty* series and provides detailed information about each character when selected.
 
 The project follows the **MVVM+Coordinator** architecture pattern to ensure a clean, maintainable, and scalable code structure. The app also utilizes **Dependency Injection** for managing dependencies and ensures smooth navigation with infinite scroll and pagination.
 
